@@ -15,9 +15,11 @@ Branches occur whenever the computer has to make a decision. For example, an if 
 
 Now then, let me tell you why I use Vim. Most Microsoft Word enjoyers, would say: "click the backwards *P* there", but that's only the very last step, right? Unless you already have your cursor on the pilcrow, you first: have to locate the backwards *P*, then you have to move your cursor near the backwards *P*, check if you are on the backwards *P*, move your cursor slightly towards the backwards *P*, then check again, and move again, and only after all that you click the button. Now then, how many of those branches were there? Well, you first have to scan for what most closely resembles a backwards *P*, but, since that is very predictable let's count it as a single, after the target has been aquired. Moving the cursor and checking whether it is time to click, will, likely, result in up to 5 very unpredictable branches. So, there are not many branches here, but it adds up, since every single button works this same way. In Vim, well it's fiddly to display non-printable characters, so instead, if you decided to change your perentheses to commas, well you press `%` to go to the opening perentheses from inside, then do a quick little `r,` to replace the `(` with a `,`, then `f)` and then the replace again (a.k.a: `.`). No decisions, only problem solving the first time and, perhaps, remembering (fetching from cache) you actions in the future.
 
-What I wanted to highlight with this comparison is that micro decisions are slow and tiresome. Instead, leave it to your muscle memory, which, by the way, has a builtin branch predictor (if you ever drove back home from work by pure instinct)  
+What I wanted to highlight with this comparison is that micro decisions are slow and tiresome. Instead, leave it to your muscle memory, which, by the way, has a builtin branch predictor (if you ever drove back home from work by pure instinct).  
 
 ## Multithreading
+
+People are terrible at doing multiple things at once, but so are computer.   
 
 
 ## Batching & compression
