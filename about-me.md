@@ -1,7 +1,27 @@
-I am a programmer. As for, what sort? Well, I've written command-line and graphical tools, web sites and servers, programming language interpreters, as well as games and mods for games.
+~~I am a programmer. As for, what sort? Well, I've written command-line and graphical tools, web sites and servers, programming language interpreters, as well as games and mods for games.
 
 For a while now, I have been obsessed with parsers, i.e.: text understanding tools, ones that convert string to in memory data structures. Over the last summer I wrote a TOML parser (TOML is Tom's Obvious Markup Language, it is generally used for program configuration/settings), since then I have written an interpreter for my own programming language: ulang, a parser for, what will most likely be, a compiled C alternative programming language for myself and an HTML parser, *by the way, use of "an" is decided not from spelling the following word, but from its pronounciation... Weird, right?*.
+
+# Languages I Have Used
+
+
+
+I have done some less than commendable things with Go... But I have used it. I like it. Networking just works™. I don't feel like it just wastes performance. It is very similar to Odin (my favourite language), so I feel quite comfortable in it.
+
+I have used Rust for small tools or foreign libraries, but I don't enjoy writting Rust, which, I'm sure, is just due to my lack of experience in it, because my main problem with it is, that the language does not allow the things I expect to be able to do. Especially with multithreading, "Like, oh my god, it's fine!" was absolutely my quote of the week.
+
+I used to use Unity when I was learning to code and I recently used C# for a mobile app, until I tried to run it on my phone. Otherwise, I like the extra freedom when compared to Java, and I especially, love the very recent `dotnet run`. But between Java, Go and C, I just haven't had a reason to use it.
+
+
+# Linux journey
 
 Also, since the start of my first year in college (as of writting, the first year is about to end), I've been using and in love with Linux on my 12 year old Intel Xeon laptop. Over the last summer I started using Vim motions, I have since almost fully switched to Neovim, which is an absolutely awesome tool in so many ways. Then, in the autumn, I started using CachyOS (a derivative of Arch Linux, but with a, supposedly, faster kernel and libraries), now, I would install Void Linux or plain Arch, since I don't like many of the provided things (e.g.: the indirection in fish's config), but it was absolutely lovely as a learning experience, since the partially preconfigured system let me learn tools, like x..., i3, dunst, rofi, coreutils, etc. one by one. 
 
 Linux on my old laptop is also where my exploration for great software really got going (or at least so it feels). When using Windows, there are many things that both suck and aren't meant to be interchangeable, e.g.: the search bar, file explorer, dwm(Desktop Window Manager), I mean, it is very possible to use Flow, dolphin and GlazeWM, but Flow doesn't come up half the time, GlazeWM cannot be used with the Windows key (whick AHK fails to solve in another quirky way) and only recently has Microsoft introduced `winget`, but, at least for me, it feels slow as hell, so I still often use `choco` or install software (very virus prone) or just use portable versions of software (very virus prone).    ...
+
+
+
+[ 
+Be to, Go aš vieną kartą naudojau muzikos piratavimui, o kitą kartą "papildžiau" kolegijos puslapį per atsiskaitymą (čia taip pat yra ir vienintelis mano HTTPS serveris su nginx), tai, taip ganausi, kad aš maždaug moku Go, bet negaliu pasakyti iš kur... 
+]
+
