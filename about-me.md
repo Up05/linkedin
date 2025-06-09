@@ -12,6 +12,9 @@ I have used Rust for small tools or foreign libraries, but I don't enjoy writtin
 
 I used to use Unity when I was learning to code and I recently used C# for a mobile app, until I tried to run it on my phone. Otherwise, I like the extra freedom when compared to Java, and I especially, love the very recent `dotnet run`. But between Java, Go and C, I just haven't had a reason to use it.
 
+I am a Neovim user, so I'm relatively comfortable in lua, although, I haven't yet written any plugins, Roblox gamemodes, or unpaid workers for computer craft... 
+
+I have also, recently, used R for some plotting over data. I enjoyed the language itself a whole lot, but, I never managed to draw anything on screen (I didn't use rstudio) and I also never got ggplot2 to draw anything onto an image, which sucks a lot. Apart from that, I love the array indexing, like: `my_table2d[[the_row]]` or `my_vector[myvector %not_in% c("a", "b", "c")]`, and the nice standard library: `responses <- read.csv("data.csv"); png("diagram.png", width=600, height=400, bg="white"); ...; dev.off()` and also, the surprisingly massive amount of mutable things...
 
 # Linux journey
 
