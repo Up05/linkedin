@@ -35,3 +35,15 @@ I have also, recently, used R for some plotting over data. I enjoyed the languag
 And I, obviously, know a bit of Python and a hell of a lot of JavaScript, because, who doesn't? 
 Except, for the 1 in 10 Americans, who think that HTML is a sexually transmitted disease, I guess.
 
+# Tools I have used
+
+I have been using Linux for about a year or so. On my laptop from 2011, I installed CachyOS (a derivative of Arch Linux, that was, supposedly, faster) and more recently on my main machine I simply just use Arch. I have used Debian,
+but, from my experience, the package manager just introduced more problems for me to deal with. And I have also installed NixOS, but I quickly understood that that was not for me... But, by now, I am relatively comfortable with Bash scripting, systemd, ssh, nginx, virtual machines, and, I guess, reading documentation...
+
+Before Linux, I spent my time trying to get as close to a good tiling window manager on Windows 10 as possible... I have had many iterations, like: AHK scripts at the start, then I tried to make my own C implementation, but there was just no documentation for things I needed (eventually even my one example went away). I also used AquaSnap, which was relatively nice. And then by the end, GlazeWM augmented with AHK. But it still just never felt good. And Besides that, I could never get the terminal to be nice, because the paths in Windows are just awful! Half my configuration files are in `~/.config`, the other half in `C:/Users/me/AppData/?/...`. Neovim did not work well in any of the terminals.
+
+Another tool, I use often use is git. I have had a few open-source contributors to my projects. Because of my laptop, I have learned to avoid Github's web UI and just use the command line to interface with it. I, like everyone, sometimes need to merge files that only I work on... It is pretty obvious to me how to `git bisect` and why I **should** squash commits.
+
+As for code editors. My current one and my favorite one is Neovim. Vim motions are genuinely amazing and I do not see how I could ever, willingly, switch from modal editing. I also, use IntelliJ for Java and Kotlin, because, the LSP is just so good. I used to use Visual Studio Code as my general editor, Visual Studio & Code::Blocks for C++ & I have tried a bunch of lesser-known editors, like the Focus editor. 
+
+Since I did not mention these in the languages section, I am still comfortable with LaTeX, I wrote my high school math "roundup" with LaTeX. I love Typst and use it for every document I can. I might as well mention, that I know Microsoft Word, Markdown and HTML(I consider HTML to be a document format, I am sorry).
