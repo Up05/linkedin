@@ -1,6 +1,6 @@
 # ulang
 
-Over last summer, I wanted to make some bigger project in Java as a good {project for work showcase}. I had just finished my TOML parser, which was just a lovely experience of a straight week of coding. And back then, I had no idea how programming language compilers were made; the problem space was just mystical to me, and I really don't like that in software. And I, generally, only like black boxes that you use to cook salmon. So I made my own interpreted language in Java called ulang. 
+Last summer, I wanted to make some bigger project in Java to have a nice portfolio piece under my belt. I had just finished my TOML parser, which was just a lovely experience of a straight week of coding. And back then, I had no idea how programming language compilers were made; the problem space was just mystical to me, and I really don't like that in software. And I, generally, only like black boxes that you use to cook salmon. So I made my own interpreted language in Java called ulang. 
 
 The syntax is somewhat similar to Odin/Go: 
 ```
@@ -13,7 +13,7 @@ func sum_f32(array: ...) f32 {
     return result
 }
 ```
-It does not have more fancy things, like: type inference, foreach or the `+=` operator, or compound types (structs/classes)... I mean, I guess, you could use arrays for types, since they are heterogeneous here...
+It lacks more fancy features like type inference, foreach or the `+=` operator, or compound types (structs/classes)... I mean, I guess, you could use arrays for types, since they are heterogeneous here...
 ```
 balls = [ [ 15, 200, 200, 1, -1, "red" ] ]
 
@@ -32,7 +32,7 @@ It does however have a foreign function interface, many of the normal math opera
 
 # Type System Fun
 
-The language is also has static typing. Which, at first, was incredibly simple, with only `number`, `bool`, `string`, `char` and a list (dynamic array) type. 
+The language also has static typing. Which, at first, was incredibly simple, with only `number`, `bool`, `string`, `char` and a list (dynamic array) type. 
 I also had structs and hash maps planned but just never got around to implementing them. 
 Unfortunately, all of the simplicity evaporated once I started interacting with other Java code (bindings/foreign functions). 
 So now I have `varargs` as a type, `any`. And also `typedef` + `foreign` to declare foreign types... So, by now, I just have this beautiful block of:
@@ -46,21 +46,21 @@ typedef i32 = foreign "int"
 typedef i64 = foreign "long"
 typedef f32 = foreign "float"
 typedef f64 = foreign "double"
-typedef u8_arr  = foreign "[B"
-typedef i8_arr  = foreign "[C"
-typedef b8_arr  = foreign "[Z"
-typedef i16_arr = foreign "[S"
-typedef i32_arr = foreign "[I"
-typedef i64_arr = foreign "[J"
-typedef f32_arr = foreign "[F"
-typedef f64_arr = foreign "[D"
+typedef u8_arr  = foreign "[B"  # array of bytes
+typedef i8_arr  = foreign "[C"  # array of oh it's alphabetical
+typedef b8_arr  = foreign "[Z"  # array of nevermind
+typedef i16_arr = foreign "[S"  # array of shorts!
+typedef i32_arr = foreign "[I"  # array of integers!
+typedef i64_arr = foreign "[J"  # array of jiants?
+typedef f32_arr = foreign "[F"  # array of floats!
+typedef f64_arr = foreign "[D"  # array of doubles!
 
-# typedef b8_arr_arr_arr = foreign "[[[F"  # 3D array
+# typedef f32_arr_arr_arr = foreign "[[[F"  # 3D array
 ```
 
 Java's reflection was actually a massive obstacle for my interpreter. Since, firstly, primitive types cannot be passed as a generic 
 (that's why you use `List<Float>` and `Map<String, Integer>`). 
-When you try to pass them wrapped in, for example, an `Object` the primitives simply decay to their respective wrapper types
+When you try to pass them wrapped in, for example, an `Object` the primitives simply "decay" to their respective wrapper types
 and so in the later stages of the project, type validation sometimes just kind of failed...
 
 Take this function, for example:
@@ -115,7 +115,7 @@ Nowadays, I would avoid this problem by not using Java for an interpreter, but b
 
 Operator precedence (or "order of operations") is relatively easy to miss in math. We quickly learn that multiplication goes before addition and raising something to the power goes before multiplication. And so, because I learned it so soon, I never actually questioned why this happens.
 
-Now then, why does operator precedence exist? Umm... I dunno ¯\\\_(ツ)\_/¯... I guess, someone REALLY wanted to write `3 + 4 * x` instead of `4 * x + 3`... And for what gets precedence over what? Well... there is the nice and logical chain of: parentheses -> ... -> exponentiation -> multiplication -> addition -> ..., but, I guess, `log` in `log x * 4` has higher precedence than the integral in `∫xdx`? And what about set operations? What about logical operations? What about bitwise operators in C!? Oh, so `window_options & RESIZABLE != 0` is `window_options & (RESIZABLE != 0)`. Okay...
+Now then, why does operator precedence exist? Umm... I dunno ¯\\\_(ツ)\_/¯... I guess, someone *really* wanted to write `3 + 4 * x` instead of `4 * x + 3`... And for what gets precedence over what? Well... there is the nice and logical chain of: parentheses -> ... -> exponentiation -> multiplication -> addition -> ..., but, I guess, `log` in `log x * 4` has higher precedence than the integral in `∫xdx`? And what about set operations? What about logical operations? What about bitwise operators in C!? Oh, so `window_options & RESIZABLE != 0` is `window_options & (RESIZABLE != 0)`. Okay...
 
 So, I either use the superior (reverse) Polish notation that no one knows, or I structure my parser around this archaic, mostly illogical, but widely accepted set of rules...
 I chose the second option.
@@ -133,6 +133,6 @@ Otherwise, for variables, I just store a `Stack<HashMap<String, Object>> scopes`
 
 ## Final Words
 
-All in all, the project ended up having around 3000 lines of code. I have a small standard library, a small (second degree) wrapper over OpenGL and GLFW, and program that draws a spinning sphere of points. I further facilitated my addiction of writing parsers. I also learned a lot about Java's reflection, for the first time in my life actually saw a reason to update Java for 1.8 (huge mistake), and I became far more syntax agnostic, to the point where the difference between Rust's and Java's syntaxes is that Rust's takes longer to learn... (But do not get me wrong. I still write `#define STRUCT(NAME, ...) typedef struct { __VA_ARGS__ } N##NAME;` if only I can).
+All in all, the project ended up having around 3000 lines of code. I have a small standard library, a small (second degree) wrapper over OpenGL and GLFW, and program that draws a spinning sphere of points. I further facilitated my addiction of writing parsers. I also learned a lot about Java's reflection, for the first time in my life actually saw a reason to update Java from 1.8 (huge mistake), and I became far more syntax agnostic, to the point where the difference between Rust's and Java's syntaxes is that Rust's takes longer to learn... (But do not get me wrong. I still write `#define STRUCT(NAME, ...) typedef struct { __VA_ARGS__ } N##NAME;` if only I can).
 
   
